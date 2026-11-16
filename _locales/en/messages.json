@@ -1,0 +1,345 @@
+{
+  "lang": {
+    "message": "en",
+    "description": "Language code of this translation, used for <html lang>"
+  },
+  "extName": {
+    "message": "Site Overlay Compare"
+  },
+  "extDescription": {
+    "message": "Overlay two live websites for pixel-perfect comparison: difference highlight, synced scroll, mirrored clicks and hover."
+  },
+  "actionTitle": {
+    "message": "Open site comparison"
+  },
+  "load": {
+    "message": "Load"
+  },
+  "swapTitle": {
+    "message": "Swap A and B"
+  },
+  "reloadTitle": {
+    "message": "Reload the current pages"
+  },
+  "copyLinkTitle": {
+    "message": "Copy a link to this comparison"
+  },
+  "fit": {
+    "message": "Fit to window"
+  },
+  "modeOverlay": {
+    "message": "Overlay"
+  },
+  "modeHighlight": {
+    "message": "Highlight"
+  },
+  "modeDifference": {
+    "message": "Difference"
+  },
+  "modeSide": {
+    "message": "Side by side"
+  },
+  "opacity": {
+    "message": "B opacity"
+  },
+  "tolerance": {
+    "message": "Tolerance"
+  },
+  "toleranceTitle": {
+    "message": "Hides differences thinner than this"
+  },
+  "toleranceOff": {
+    "message": "off"
+  },
+  "toleranceUpTo": {
+    "message": "up to $1 px"
+  },
+  "diffNow": {
+    "message": "Refresh"
+  },
+  "diffNowTitle": {
+    "message": "Recompute the difference if the page changed without scrolling"
+  },
+  "clickIn": {
+    "message": "Click in"
+  },
+  "hideB": {
+    "message": "Hide B"
+  },
+  "syncScroll": {
+    "message": "Sync scroll"
+  },
+  "scrollModeTitle": {
+    "message": "How to sync scrolling"
+  },
+  "scrollPx": {
+    "message": "by pixels"
+  },
+  "scrollRatio": {
+    "message": "by page height %"
+  },
+  "mirror": {
+    "message": "Mirror actions"
+  },
+  "followRoute": {
+    "message": "Follow navigation"
+  },
+  "followRouteTitle": {
+    "message": "Navigating in one layer opens the same route in the other"
+  },
+  "offsetB": {
+    "message": "Offset B"
+  },
+  "hint": {
+    "message": "Alt+1 / Alt+2 — active layer · Alt+H — hide B · Alt+D — difference · Alt+T — toolbar"
+  },
+  "loading": {
+    "message": "loading…"
+  },
+  "diffFailed": {
+    "message": "Couldn't refresh the difference: $1"
+  },
+  "mirrored": {
+    "message": "Mirrored in $1 ($2)"
+  },
+  "howText": {
+    "message": "by text"
+  },
+  "howLabel": {
+    "message": "by label"
+  },
+  "howHref": {
+    "message": "by href"
+  },
+  "howSelector": {
+    "message": "by selector"
+  },
+  "howPoint": {
+    "message": "by position"
+  },
+  "howInput": {
+    "message": "field"
+  },
+  "mirrorMissed": {
+    "message": "No matching element found in $1"
+  },
+  "leftBase": {
+    "message": "$1 left its base URL, $2 stays where it is"
+  },
+  "notResponding": {
+    "message": "$1 is not responding: the site may block iframes with a script, or this tab needs a reload after installing the extension"
+  },
+  "linkCopied": {
+    "message": "Link copied"
+  },
+  "linkCopyFailed": {
+    "message": "Couldn't copy the link"
+  },
+  "rulesFailed": {
+    "message": "Couldn't install header rules: $1"
+  },
+  "linkHold": {
+    "message": "Link opened from a website. Check the URLs and press “Load”"
+  },
+  "settingsTitle": {
+    "message": "Settings"
+  },
+  "optTitle": {
+    "message": "Site Overlay Compare settings"
+  },
+  "optHeading": {
+    "message": "Settings"
+  },
+  "optSub": {
+    "message": "Changes are saved right away and apply to open comparison tabs."
+  },
+  "optSaved": {
+    "message": "Saved"
+  },
+  "optWidths": {
+    "message": "Breakpoint widths"
+  },
+  "optWidthsDesc": {
+    "message": "Buttons in the Width group. Click a width to remove it."
+  },
+  "optAdd": {
+    "message": "Add"
+  },
+  "optResetWidths": {
+    "message": "Restore defaults"
+  },
+  "optRemoveWidth": {
+    "message": "Remove $1 px"
+  },
+  "optNoWidths": {
+    "message": "No buttons: only the number field stays."
+  },
+  "optWidthRange": {
+    "message": "Enter a width from $1 to $2 px"
+  },
+  "optWidthExists": {
+    "message": "$1 px is already in the list"
+  },
+  "optModes": {
+    "message": "Modes"
+  },
+  "optModesDesc": {
+    "message": "Modes you don't use disappear from the toolbar. At least one stays on."
+  },
+  "optModeOverlayDesc": {
+    "message": "B on top of A with adjustable opacity"
+  },
+  "optModeHighlightDesc": {
+    "message": "Overlay with the changes pulsing in colour"
+  },
+  "optModeDifferenceDesc": {
+    "message": "Matching pixels turn black, changes glow"
+  },
+  "optModeSideDesc": {
+    "message": "Both sites next to each other at the chosen width"
+  },
+  "optFeatures": {
+    "message": "Features"
+  },
+  "optFeaturesDesc": {
+    "message": "A feature that is off is hidden from the toolbar and never runs."
+  },
+  "optSyncScroll": {
+    "message": "Synced scrolling"
+  },
+  "optSyncScrollDesc": {
+    "message": "Scrolling one site scrolls the other, by pixels or by page height"
+  },
+  "optFollow": {
+    "message": "Follow navigation"
+  },
+  "optFollowDesc": {
+    "message": "Opening another page in one site opens the same route in the other"
+  },
+  "optMirrorClicks": {
+    "message": "Mirror clicks"
+  },
+  "optMirrorClicksDesc": {
+    "message": "Buttons, links and menus pressed in one site are pressed in the other"
+  },
+  "optMirrorHover": {
+    "message": "Mirror hover"
+  },
+  "optMirrorHoverDesc": {
+    "message": "Hover effects and dropdown menus open in both sites"
+  },
+  "optMirrorInput": {
+    "message": "Mirror typing"
+  },
+  "optMirrorInputDesc": {
+    "message": "Text typed in a field appears in the same field of the other site. Passwords never do"
+  },
+  "optOffset": {
+    "message": "Offset B"
+  },
+  "optOffsetDesc": {
+    "message": "Shift the top layer by X/Y, for example when headers differ in height"
+  },
+  "optHotkeys": {
+    "message": "Keyboard shortcuts"
+  },
+  "optHotkeysDesc": {
+    "message": "Alt+1 / Alt+2 active layer, Alt+H hide B, Alt+D difference, Alt+T toolbar. Off, these keys reach the sites"
+  },
+  "optLinks": {
+    "message": "Comparison links"
+  },
+  "optLinksDesc": {
+    "message": "The copy link button, and opening site-overlay.invalid links as a comparison"
+  },
+  "optLook": {
+    "message": "Appearance"
+  },
+  "optTheme": {
+    "message": "Theme"
+  },
+  "optThemeSystem": {
+    "message": "System"
+  },
+  "optThemeLight": {
+    "message": "Light"
+  },
+  "optThemeDark": {
+    "message": "Dark"
+  },
+  "optDiffColor": {
+    "message": "Difference colour"
+  },
+  "optDiffColorDesc": {
+    "message": "Colour of the highlight in Highlight mode. Pick one that stands out on your sites"
+  },
+  "optReset": {
+    "message": "Reset"
+  },
+  "optPulse": {
+    "message": "Pulsing highlight"
+  },
+  "optPulseDesc": {
+    "message": "Off, the highlight stays still"
+  },
+  "optResetAll": {
+    "message": "Reset all settings"
+  },
+  "optResetConfirm": {
+    "message": "Reset all settings to defaults?"
+  },
+  "fitSideTitle": {
+    "message": "Side by side always fits the window"
+  },
+  "widthSliderTitle": {
+    "message": "Drag to any width between the breakpoints"
+  },
+  "more": {
+    "message": "More"
+  },
+  "mirrorPill": {
+    "message": "Mirroring on"
+  },
+  "mirrorPillTitle": {
+    "message": "Your clicks, hover and typing are repeated in the other site. Click to turn this off"
+  },
+  "mirrorNote": {
+    "message": "Clicks, hover and typing are repeated in the other site. These are real clicks: careful on production"
+  },
+  "hideToolbar": {
+    "message": "Hide the toolbar"
+  },
+  "showToolbar": {
+    "message": "Show the toolbar"
+  },
+  "welcomeTitle": {
+    "message": "Compare two live websites"
+  },
+  "welcomeStep1": {
+    "message": "Enter two addresses above: A is the bottom layer, B goes on top."
+  },
+  "welcomeStep2": {
+    "message": "Add a shared route such as /pricing, or leave it empty."
+  },
+  "welcomeStep3": {
+    "message": "Press Load, then pick a mode and a width."
+  },
+  "fitNote": {
+    "message": "Scales the sites down when the width is larger than the window"
+  },
+  "modeDifferenceShort": {
+    "message": "Diff"
+  },
+  "modeSideShort": {
+    "message": "Side"
+  },
+  "updateTitle": {
+    "message": "Reload the extension to finish the update"
+  },
+  "reloadText": {
+    "message": "The files on disk are version $1, but Chrome is still running version $2, so the sites cannot connect to this page. Reloading closes this tab; click the extension icon to open your comparison again."
+  },
+  "reloadButton": {
+    "message": "Reload the extension"
+  }
+}

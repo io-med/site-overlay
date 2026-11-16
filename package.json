@@ -1,0 +1,20 @@
+{
+  "name": "site-overlay-compare",
+  "version": "1.10.1",
+  "private": true,
+  "description": "Chrome extension that overlays two live websites for pixel-perfect comparison",
+  "license": "MIT",
+  "scripts": {
+    "test": "node tests/run.js",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "build": "scripts/build.sh",
+    "screenshots": "node store/shots.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.0",
+    "eslint": "^10.0.0",
+    "globals": "^16.0.0",
+    "prettier": "^3.0.0"
+  }
+}

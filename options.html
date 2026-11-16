@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="optTitle">Site Overlay Compare settings</title>
+    <link rel="icon" href="icons/icon32.png" />
+    <link rel="stylesheet" href="styles/theme.css" />
+    <link rel="stylesheet" href="styles/options.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="head">
+        <img src="icons/icon48.png" width="40" height="40" alt="" />
+        <div>
+          <h1 data-i18n="optHeading">Settings</h1>
+          <p class="sub" data-i18n="optSub">
+            Changes are saved right away and apply to open comparison tabs.
+          </p>
+        </div>
+        <span id="saved" class="saved" data-i18n="optSaved" hidden>Saved</span>
+      </header>
+
+      <section class="card">
+        <h2 data-i18n="optWidths">Breakpoint widths</h2>
+        <p class="desc" data-i18n="optWidthsDesc">Buttons in the Width group. Click a width to remove it.</p>
+        <div id="presetList" class="presets"></div>
+        <form id="addPreset" class="add">
+          <input
+            id="newPreset"
+            type="number"
+            min="200"
+            max="3840"
+            step="1"
+            placeholder="1600"
+            aria-label="Width in px"
+          />
+          <span class="unit">px</span>
+          <button type="submit" data-i18n="optAdd">Add</button>
+          <button type="button" id="resetPresets" class="ghost" data-i18n="optResetWidths">
+            Restore defaults
+          </button>
+          <span id="presetError" class="error" role="alert"></span>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="optModes">Modes</h2>
+        <p class="desc" data-i18n="optModesDesc">
+          Modes you don't use disappear from the toolbar. At least one stays on.
+        </p>
+        <div class="list">
+          <label class="item">
+            <span class="txt">
+              <b data-i18n="modeOverlay">Overlay</b>
+              <small data-i18n="optModeOverlayDesc">B on top of A with adjustable opacity</small>
+            </span>
+            <input type="checkbox" class="switch" data-mode="overlay" />
+          </label>
+          <label class="item">
+            <span class="txt">
+              <b data-i18n="modeHighlight">Highlight</b>
+              <small data-i18n="optModeHighlightDesc">Overlay with the changes pulsing in colour</small>
+            </span>
+            <input type="checkbox" class="switch" data-mode="highlight" />
+          </label>
+          <label class="item">
+            <span class="txt">
+              <b data-i18n="modeDifference">Difference</b>
+              <small data-i18n="optModeDifferenceDesc">Matching pixels turn black, changes glow</small>
+            </span>
+            <input type="checkbox" class="switch" data-mode="difference" />
+          </label>
+          <label class="item">
+            <span class="txt">
+              <b data-i18n="modeSide">Side by side</b>
+              <small data-i18n="optModeSideDesc">Both sites next to each other at the chosen width</small>
+            </span>
+            <input type="checkbox" class="switch" data-mode="side" />
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="optFeatures">Features</h2>
+        <p class="desc" data-i18n="optFeaturesDesc">
+          A feature that is off is hidden from the toolbar and never runs.
+        </p>
+        <div class="list">
+          <label class="item">
+            <span class="txt">
+              <b data-i18n="optSyncScroll">Synced scrolling</b>
+              <small data-i18n="optSyncScrollDesc">
+                Scrolling one site scrolls the other, by pixels or by page height
+              </small>
+            </span>
+            <input type="checkbox" class="switch" data-key="syncScroll" />
+          </label>
+          <label class="item">
+            <span class="txt">
+              <b data-i18n="optFollow">Follow navigation</b>
+              <small data-i18n="optFollowDesc">
+                Opening another page in one site opens the same route in the other
+              </small>
+            </span>
+            <input type="checkbox" class="switch" data-key="followRoute" />
+          </label>
+          <label class="item">
+            <span class="txt">
+              <b data-i18n="optMirrorClicks">Mirror clicks</b>
+              <small data-i18n="optMirrorClicksDesc">
+                Buttons, links and menus pressed in one site are pressed in the other
+              </small>
+            </span>
+            <input type="checkbox" class="switch" data-key="mirrorClicks" />
+          </label>
+          <label class="item">
+            <span class="txt">
+              <b data-i18n="optMirrorHover">Mirror hover</b>
+              <small data-i18n="optMirrorHoverDesc">
+                Hover effects and dropdown menus open in both sites
+              </small>
+            </span>
+            <input type="checkbox" class="switch" data-key="mirrorHover" />
+          </label>
+          <label class="item">
+            <span class="txt">
+              <b data-i18n="optMirrorInput">Mirror typing</b>
+              <small data-i18n="optMirrorInputDesc">
+                Text typed in a field appears in the same field of the other site. Passwords never do
+              </small>
+            </span>
+            <input type="checkbox" class="switch" data-key="mirrorInput" />
+          </label>
+          <label class="item">
+            <span class="txt">
+              <b data-i18n="optOffset">Offset B</b>
+              <small data-i18n="optOffsetDesc">
+                Shift the top layer by X/Y, for example when headers differ in height
+              </small>
+            </span>
+            <input type="checkbox" class="switch" data-key="offset" />
+          </label>
+          <label class="item">
+            <span class="txt">
+              <b data-i18n="optHotkeys">Keyboard shortcuts</b>
+              <small data-i18n="optHotkeysDesc">
+                Alt+1 / Alt+2 active layer, Alt+H hide B, Alt+D difference, Alt+T toolbar. Off, these keys
+                reach the sites
+              </small>
+            </span>
+            <input type="checkbox" class="switch" data-key="hotkeys" />
+          </label>
+          <label class="item">
+            <span class="txt">
+              <b data-i18n="optLinks">Comparison links</b>
+              <small data-i18n="optLinksDesc">
+                The copy link button, and opening site-overlay.invalid links as a comparison
+              </small>
+            </span>
+            <input type="checkbox" class="switch" data-key="links" />
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="optLook">Appearance</h2>
+        <div class="list">
+          <div class="item">
+            <span class="txt"><b data-i18n="optTheme">Theme</b></span>
+            <div class="seg" id="themeSeg">
+              <button type="button" data-v="system" data-i18n="optThemeSystem">System</button>
+              <button type="button" data-v="light" data-i18n="optThemeLight">Light</button>
+              <button type="button" data-v="dark" data-i18n="optThemeDark">Dark</button>
+            </div>
+          </div>
+          <div class="item">
+            <span class="txt">
+              <b data-i18n="optDiffColor">Difference colour</b>
+              <small data-i18n="optDiffColorDesc">
+                Colour of the highlight in Highlight mode. Pick one that stands out on your sites
+              </small>
+            </span>
+            <span class="color">
+              <button type="button" id="resetColor" class="ghost" data-i18n="optReset">Reset</button>
+              <input id="diffColor" type="color" aria-label="Difference colour" />
+            </span>
+          </div>
+          <label class="item">
+            <span class="txt">
+              <b data-i18n="optPulse">Pulsing highlight</b>
+              <small data-i18n="optPulseDesc">Off, the highlight stays still</small>
+            </span>
+            <input type="checkbox" class="switch" data-key="pulse" />
+          </label>
+        </div>
+      </section>
+
+      <footer class="foot">
+        <span id="version"></span>
+        <button type="button" id="resetAll" class="ghost" data-i18n="optResetAll">Reset all settings</button>
+      </footer>
+    </main>
+    <script type="module" src="src/options/main.js"></script>
+  </body>
+</html>

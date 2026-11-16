@@ -1,0 +1,345 @@
+{
+  "lang": {
+    "message": "uk",
+    "description": "Language code of this translation, used for <html lang>"
+  },
+  "extName": {
+    "message": "Site Overlay Compare"
+  },
+  "extDescription": {
+    "message": "Накладання двох живих сайтів для pixel-perfect порівняння: підсвітка різниці, синхронний скрол, дзеркалення кліків і наведення."
+  },
+  "actionTitle": {
+    "message": "Відкрити порівняння сайтів"
+  },
+  "load": {
+    "message": "Завантажити"
+  },
+  "swapTitle": {
+    "message": "Поміняти A і B місцями"
+  },
+  "reloadTitle": {
+    "message": "Перезавантажити поточні сторінки"
+  },
+  "copyLinkTitle": {
+    "message": "Копіювати посилання на це порівняння"
+  },
+  "fit": {
+    "message": "Вписати у вікно"
+  },
+  "modeOverlay": {
+    "message": "Накладання"
+  },
+  "modeHighlight": {
+    "message": "Підсвітка"
+  },
+  "modeDifference": {
+    "message": "Різниця"
+  },
+  "modeSide": {
+    "message": "Поруч"
+  },
+  "opacity": {
+    "message": "Прозорість B"
+  },
+  "tolerance": {
+    "message": "Толерантність"
+  },
+  "toleranceTitle": {
+    "message": "Ховає розбіжності, тонші за вказану товщину"
+  },
+  "toleranceOff": {
+    "message": "вимк."
+  },
+  "toleranceUpTo": {
+    "message": "до $1 px"
+  },
+  "diffNow": {
+    "message": "Оновити"
+  },
+  "diffNowTitle": {
+    "message": "Перерахувати різницю, якщо сторінка змінилась без скролу"
+  },
+  "clickIn": {
+    "message": "Клікати в"
+  },
+  "hideB": {
+    "message": "Сховати B"
+  },
+  "syncScroll": {
+    "message": "Синхронний скрол"
+  },
+  "scrollModeTitle": {
+    "message": "Як синхронізувати скрол"
+  },
+  "scrollPx": {
+    "message": "за пікселями"
+  },
+  "scrollRatio": {
+    "message": "за відсотком висоти"
+  },
+  "mirror": {
+    "message": "Дзеркалити дії"
+  },
+  "followRoute": {
+    "message": "Route за навігацією"
+  },
+  "followRouteTitle": {
+    "message": "Перехід в одному шарі відкриває той самий route в іншому"
+  },
+  "offsetB": {
+    "message": "Зсув B"
+  },
+  "hint": {
+    "message": "Alt+1 / Alt+2 — активний шар · Alt+H — сховати B · Alt+D — різниця · Alt+T — панель"
+  },
+  "loading": {
+    "message": "завантаження…"
+  },
+  "diffFailed": {
+    "message": "Не вдалося оновити різницю: $1"
+  },
+  "mirrored": {
+    "message": "Віддзеркалено в $1 ($2)"
+  },
+  "howText": {
+    "message": "за текстом"
+  },
+  "howLabel": {
+    "message": "за підписом"
+  },
+  "howHref": {
+    "message": "за href"
+  },
+  "howSelector": {
+    "message": "за селектором"
+  },
+  "howPoint": {
+    "message": "за координатами"
+  },
+  "howInput": {
+    "message": "поле"
+  },
+  "mirrorMissed": {
+    "message": "Не знайшов відповідний елемент у $1"
+  },
+  "leftBase": {
+    "message": "$1 вийшов за межі base URL, $2 лишається на місці"
+  },
+  "notResponding": {
+    "message": "$1 не відповідає: сайт може блокувати iframe скриптом, або вкладку треба перезавантажити після встановлення розширення"
+  },
+  "linkCopied": {
+    "message": "Посилання скопійовано"
+  },
+  "linkCopyFailed": {
+    "message": "Не вдалося скопіювати посилання"
+  },
+  "rulesFailed": {
+    "message": "Не вдалося встановити правила заголовків: $1"
+  },
+  "linkHold": {
+    "message": "Посилання відкрито зі сторінки сайту. Перевірте адреси й натисніть «Завантажити»"
+  },
+  "settingsTitle": {
+    "message": "Налаштування"
+  },
+  "optTitle": {
+    "message": "Налаштування Site Overlay Compare"
+  },
+  "optHeading": {
+    "message": "Налаштування"
+  },
+  "optSub": {
+    "message": "Зміни зберігаються одразу й діють і у вже відкритих вкладках порівняння."
+  },
+  "optSaved": {
+    "message": "Збережено"
+  },
+  "optWidths": {
+    "message": "Ширини-брейкпоінти"
+  },
+  "optWidthsDesc": {
+    "message": "Кнопки в групі «Ширина». Клік по ширині прибирає її."
+  },
+  "optAdd": {
+    "message": "Додати"
+  },
+  "optResetWidths": {
+    "message": "Повернути стандартні"
+  },
+  "optRemoveWidth": {
+    "message": "Прибрати $1 px"
+  },
+  "optNoWidths": {
+    "message": "Кнопок немає, лишається тільки поле для числа."
+  },
+  "optWidthRange": {
+    "message": "Вкажіть ширину від $1 до $2 px"
+  },
+  "optWidthExists": {
+    "message": "$1 px уже є в списку"
+  },
+  "optModes": {
+    "message": "Режими"
+  },
+  "optModesDesc": {
+    "message": "Режими, якими ви не користуєтесь, зникнуть з панелі. Один завжди лишається."
+  },
+  "optModeOverlayDesc": {
+    "message": "B над A з регульованою прозорістю"
+  },
+  "optModeHighlightDesc": {
+    "message": "Накладання, на якому розбіжності пульсують кольором"
+  },
+  "optModeDifferenceDesc": {
+    "message": "Збіг чорний, розбіжності світяться"
+  },
+  "optModeSideDesc": {
+    "message": "Сайти поруч, обидва на вибраній ширині"
+  },
+  "optFeatures": {
+    "message": "Функції"
+  },
+  "optFeaturesDesc": {
+    "message": "Вимкнена функція зникає з панелі й не працює взагалі."
+  },
+  "optSyncScroll": {
+    "message": "Синхронний скрол"
+  },
+  "optSyncScrollDesc": {
+    "message": "Скрол одного сайту прокручує інший, за пікселями або за висотою сторінки"
+  },
+  "optFollow": {
+    "message": "Route за навігацією"
+  },
+  "optFollowDesc": {
+    "message": "Перехід на іншу сторінку в одному сайті відкриває той самий route в іншому"
+  },
+  "optMirrorClicks": {
+    "message": "Дзеркалити кліки"
+  },
+  "optMirrorClicksDesc": {
+    "message": "Кнопки, посилання й меню, натиснуті в одному сайті, натискаються і в іншому"
+  },
+  "optMirrorHover": {
+    "message": "Дзеркалити наведення"
+  },
+  "optMirrorHoverDesc": {
+    "message": "Hover-ефекти й випадні меню відкриваються в обох сайтах"
+  },
+  "optMirrorInput": {
+    "message": "Дзеркалити введення"
+  },
+  "optMirrorInputDesc": {
+    "message": "Текст, введений у поле, з’являється в такому ж полі іншого сайту. Паролі ніколи"
+  },
+  "optOffset": {
+    "message": "Зсув B"
+  },
+  "optOffsetDesc": {
+    "message": "Зсунути верхній шар по X/Y, наприклад, якщо хедери різної висоти"
+  },
+  "optHotkeys": {
+    "message": "Гарячі клавіші"
+  },
+  "optHotkeysDesc": {
+    "message": "Alt+1 / Alt+2 активний шар, Alt+H сховати B, Alt+D різниця, Alt+T панель. Вимкнені, ці клавіші йдуть сайтам"
+  },
+  "optLinks": {
+    "message": "Посилання на порівняння"
+  },
+  "optLinksDesc": {
+    "message": "Кнопка копіювання посилання й відкриття посилань site-overlay.invalid як порівняння"
+  },
+  "optLook": {
+    "message": "Вигляд"
+  },
+  "optTheme": {
+    "message": "Тема"
+  },
+  "optThemeSystem": {
+    "message": "Як у системі"
+  },
+  "optThemeLight": {
+    "message": "Світла"
+  },
+  "optThemeDark": {
+    "message": "Темна"
+  },
+  "optDiffColor": {
+    "message": "Колір різниці"
+  },
+  "optDiffColorDesc": {
+    "message": "Колір підсвітки в режимі «Підсвітка». Виберіть той, що вирізняється на ваших сайтах"
+  },
+  "optReset": {
+    "message": "Скинути"
+  },
+  "optPulse": {
+    "message": "Пульсація підсвітки"
+  },
+  "optPulseDesc": {
+    "message": "Вимкнена, підсвітка не блимає"
+  },
+  "optResetAll": {
+    "message": "Скинути всі налаштування"
+  },
+  "optResetConfirm": {
+    "message": "Повернути всі налаштування до стандартних?"
+  },
+  "fitSideTitle": {
+    "message": "Режим «поруч» завжди вміщується у вікно"
+  },
+  "widthSliderTitle": {
+    "message": "Перетягніть, щоб вибрати будь-яку ширину між брейкпоінтами"
+  },
+  "more": {
+    "message": "Ще"
+  },
+  "mirrorPill": {
+    "message": "Дзеркалення увімкнене"
+  },
+  "mirrorPillTitle": {
+    "message": "Ваші кліки, наведення й введення повторюються в іншому сайті. Клік вимикає це"
+  },
+  "mirrorNote": {
+    "message": "Кліки, наведення й введення повторюються в іншому сайті. Це справжні кліки: обережно на продакшні"
+  },
+  "hideToolbar": {
+    "message": "Сховати панель"
+  },
+  "showToolbar": {
+    "message": "Показати панель"
+  },
+  "welcomeTitle": {
+    "message": "Порівняйте два живі сайти"
+  },
+  "welcomeStep1": {
+    "message": "Впишіть угорі дві адреси: A буде нижнім шаром, B верхнім."
+  },
+  "welcomeStep2": {
+    "message": "Додайте спільний route, наприклад /pricing, або лишіть поле порожнім."
+  },
+  "welcomeStep3": {
+    "message": "Натисніть «Завантажити», потім виберіть режим і ширину."
+  },
+  "fitNote": {
+    "message": "Зменшує сайти, коли ширина більша за вікно"
+  },
+  "modeDifferenceShort": {
+    "message": "Різниця"
+  },
+  "modeSideShort": {
+    "message": "Поруч"
+  },
+  "updateTitle": {
+    "message": "Перезавантажте розширення, щоб завершити оновлення"
+  },
+  "reloadText": {
+    "message": "Файли на диску мають версію $1, а Chrome досі працює з версією $2, тому сайти не можуть з’єднатися з цією сторінкою. Перезавантаження закриє цю вкладку; клікніть іконку розширення, і порівняння відкриється знову."
+  },
+  "reloadButton": {
+    "message": "Перезавантажити розширення"
+  }
+}

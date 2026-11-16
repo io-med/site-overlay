@@ -1,0 +1,424 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#bar {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 6;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+}
+.group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.group.tight {
+  gap: 6px;
+}
+.lbl {
+  color: var(--muted);
+}
+
+.addr {
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+.url {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1 1 320px;
+  min-width: 0;
+  height: 32px;
+  padding: 0 4px 0 6px;
+  background: var(--field);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition:
+    border-color 0.12s,
+    box-shadow 0.12s;
+}
+.url:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.url input {
+  flex: 1;
+  min-width: 0;
+  height: 30px;
+  border: 0;
+  background: transparent;
+  padding: 0 4px;
+  box-shadow: none !important;
+}
+.url.route {
+  flex: 0 1 230px;
+}
+.url .lbl {
+  font-size: 12px;
+  padding-left: 2px;
+}
+.addr > button {
+  height: 32px;
+}
+.addr #load {
+  padding: 0 16px;
+}
+.icons {
+  display: flex;
+  gap: 2px;
+  margin-left: 2px;
+}
+.icons button {
+  height: 32px;
+  width: 32px;
+}
+
+/*
+ * Tool groups share one row and wrap when the window is narrow. Every group draws a hairline
+ * on its left; the row is shifted left and clipped, so the line of a group that starts a
+ * wrapped line falls outside and is not drawn.
+ */
+.tools {
+  gap: 8px 0;
+  margin-left: -15px;
+  clip-path: inset(-6px -6px -6px 15px);
+}
+.tools > .group {
+  padding: 0 14px;
+  border-left: 1px solid var(--line);
+}
+/* A group whose controls are all switched off in the options disappears with its label. */
+.tools > .group:not(:has(> :not(.lbl, [hidden]))) {
+  display: none;
+}
+#presets button {
+  padding: 0 5px;
+  font-variant-numeric: tabular-nums;
+}
+/* The slider spans the breakpoint buttons; src/compare/width.js puts its thumb under the matching one. */
+.presetBox {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+#widthSlider {
+  width: 100%;
+  height: 12px;
+}
+#modeSeg button {
+  padding: 0 10px;
+}
+#moreButton svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Shown only while mirroring is on, because mirrored clicks are real clicks. */
+.pill {
+  border-radius: 999px;
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, var(--line));
+  background: color-mix(in srgb, var(--warn) 12%, var(--panel));
+}
+
+/* The More menu: a popover placed under its button by src/compare/controls.js. */
+.menu {
+  inset: auto;
+  margin: 0;
+  width: 320px;
+  padding: 6px 14px;
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+.menuRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  white-space: normal;
+}
+.menuRow + .menuRow,
+.menu .hint {
+  border-top: 1px solid var(--line);
+}
+.menuRow > .chip {
+  flex: 1;
+}
+.menu .chip {
+  align-items: flex-start;
+  white-space: normal;
+}
+.menu .chip > .switch {
+  margin-top: 2px;
+}
+.menuRow small {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.menuRow > span:first-child {
+  flex: 1;
+}
+.menu .hint {
+  margin: 0;
+  padding: 10px 0 6px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+#activeSeg button {
+  min-width: 28px;
+  font-weight: 700;
+}
+#activeSeg button[data-v='A'].on {
+  background: var(--a);
+}
+#activeSeg button[data-v='B'].on {
+  background: var(--b);
+}
+
+.num {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted);
+}
+.num input {
+  width: 68px;
+  font-variant-numeric: tabular-nums;
+}
+.num input.sm {
+  width: 56px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+.chip:has(input:not(:checked)) > span {
+  color: var(--muted);
+}
+.chip:has(input:disabled) {
+  cursor: default;
+}
+.chip:has(input:disabled) > span {
+  color: var(--faint);
+}
+
+#opacity,
+#tolerance {
+  width: 100px;
+}
+.val {
+  min-width: 36px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.val.wide {
+  min-width: 58px;
+}
+
+#viewport {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+  background: repeating-conic-gradient(var(--check-1) 0 25%, var(--check-2) 0 50%) 0 0 / 16px 16px;
+}
+/* A notice in place of the sites: the start screen, or a half-finished update. */
+.card {
+  max-width: 460px;
+  margin: 12vh auto 0;
+  padding: 28px 32px;
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.card h1 {
+  margin: 14px 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.card ol {
+  margin: 0;
+  padding-left: 22px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.card li + li {
+  margin-top: 6px;
+}
+.card p {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.card button {
+  height: 34px;
+  padding: 0 18px;
+}
+
+/* No sites yet, so no addresses to show under them. */
+#viewport:has(#stage[hidden]) ~ #foot .cur {
+  visibility: hidden;
+}
+
+#stage {
+  position: relative;
+  margin: 0 auto;
+  transform-origin: top left;
+}
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  background: #fff;
+  box-shadow: 0 0 0 1px var(--line);
+}
+#frameB.diff {
+  mix-blend-mode: difference;
+}
+
+/* Each layer's address sits under its own screen; src/compare/layout.js positions the two captions. */
+#foot {
+  flex: none;
+  position: relative;
+  height: 28px;
+  font-size: 12px;
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cur {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 8px;
+  min-width: 0;
+}
+.cur .tag {
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  border-radius: 4px;
+}
+.curl {
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+/* Hides or shows the whole toolbar, to give the sites the full height. */
+#toggleBar {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  background: var(--panel);
+}
+#toggleBar svg {
+  transition: transform 0.15s;
+}
+.barHidden #bar {
+  display: none;
+}
+.barHidden #toggleBar svg {
+  transform: rotate(180deg);
+}
+
+/* Status: a short note above the captions; clicks pass through it. */
+.status {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  z-index: 7;
+  pointer-events: none;
+  max-width: min(720px, calc(100vw - 32px));
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.status:empty {
+  display: none;
+}
+.status.warn {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, var(--line));
+}
+
+#diffLayer {
+  position: fixed;
+  z-index: 5;
+  pointer-events: none;
+  will-change: opacity;
+  animation: diffPulse 0.9s ease-in-out infinite alternate;
+}
+#diffLayer.still {
+  animation: none;
+  opacity: 0.8;
+}
+@keyframes diffPulse {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #diffLayer {
+    animation: none;
+    opacity: 0.7;
+  }
+}
+.defs {
+  position: absolute;
+}
