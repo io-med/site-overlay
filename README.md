@@ -8,7 +8,7 @@ A Chrome extension that lays two live websites on top of each other for pixel-pe
 
 ## Install
 
-**From the Chrome Web Store:** _link coming soon_.
+**From the Chrome Web Store:** [Site Overlay Compare](https://chromewebstore.google.com/detail/cenbinabmhiedjflbabbokbnpbcfbmem)
 
 **From an archive or from source** (Chrome 126 or newer):
 

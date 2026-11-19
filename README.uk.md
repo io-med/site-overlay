@@ -8,7 +8,7 @@
 
 ## Встановлення
 
-**З Chrome Web Store:** _посилання з'явиться після публікації_.
+**З Chrome Web Store:** [Site Overlay Compare](https://chromewebstore.google.com/detail/cenbinabmhiedjflbabbokbnpbcfbmem)
 
 **З архіву або з вихідного коду** (потрібен Chrome 126 або новіший):
 
